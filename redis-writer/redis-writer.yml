@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://172.16.1.3:31112
+functions:
+  redis-writer:
+    lang: node
+    handler: ./function/handler.js
+    image: redis-writer:latest
+
